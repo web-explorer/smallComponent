@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body {
+		margin: 50px;
+	}
+	.closeIcon-selfMade {
+		font-size: 0;
+		float: right;
+		/*行内元素的css display: block;宽度会自动变为父元素的100%*/
+	}
+	.closeIcon-selfMade::before,.closeIcon-selfMade::after {
+		display: block;
+		content: '';
+		width: 50px;
+		height: 2px;
+		background-color: #000;
+	}
+	.closeIcon-selfMade::after {
+		transform: translateY(-2px) rotate(45deg);
+		-webkit-transform: translateY(-2px) rotate(45deg);
+
+	}
+	.closeIcon-selfMade::before {
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+	</style>
+</head>
+<body>
+
+<span class="closeIcon-selfMade">Close Me</span>
+</body>
+</html>
